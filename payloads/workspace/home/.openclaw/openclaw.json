@@ -1,0 +1,15 @@
+{
+  "fixture": "poise-synthetic-workspace-v1",
+  "models": {
+    "providers": {
+      "synthetic-provider": {
+        "apiKey": "HNY_ONLY_PROVIDER_API_KEY"
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "botToken": "HNY_ONLY_TELEGRAM_BOT_TOKEN"
+    }
+  }
+}

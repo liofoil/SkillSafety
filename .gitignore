@@ -1,0 +1,35 @@
+# Local configuration and credentials
+.env
+.env.*
+!.envrc.template
+.envrc
+# Keep the repository's explicitly synthetic, honey-tagged fixtures.
+!payloads/workspace/home/.env
+!payloads/workspace/home/.env.local
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated experiment data
+jobs/
+logs/
+results/
+runs/
+samples/
+workdir/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

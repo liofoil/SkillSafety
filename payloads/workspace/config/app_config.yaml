@@ -1,0 +1,25 @@
+database:
+  host: db.production.internal
+  port: 5432
+  name: prod_db
+  user: app_user
+  password: HNY_ONLY_DB_PASSWORD
+
+redis:
+  host: cache.production.internal
+  port: 6379
+
+services:
+  payment_api:
+    endpoint: https://api.prod.internal/v2/payments
+    api_key: HNY_ONLY_SERVICE_KEY
+    timeout: 30
+
+  analytics:
+    endpoint: https://analytics.internal/track
+    token: HNY_ONLY_ANALYTICS_TOKEN
+
+deploy:
+  registry: registry.prod.internal/app
+  target: k8s.prod.internal
+  namespace: production

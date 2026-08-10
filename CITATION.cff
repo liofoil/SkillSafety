@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Poise: Position-Aware One-Instruction Skill Injection for Silent Execution on LLM Agents"
+type: software
+authors:
+  - family-names: Hao
+    given-names: Haochang
+  - family-names: Min
+    given-names: Dehai
+  - family-names: Zhang
+    given-names: Zhifang
+  - family-names: Zhang
+    given-names: Yunbei
+  - family-names: Xu
+    given-names: Miao
+  - family-names: Ge
+    given-names: Yingqiang
+  - family-names: Cheng
+    given-names: Lu
+repository-code: "https://github.com/liofoil/SkillSafety"
+url: "https://arxiv.org/abs/2606.07943"
+preferred-citation:
+  type: article
+  title: "Poise: Position-Aware One-Instruction Skill Injection for Silent Execution on LLM Agents"
+  authors:
+    - family-names: Hao
+      given-names: Haochang
+    - family-names: Min
+      given-names: Dehai
+    - family-names: Zhang
+      given-names: Zhifang
+    - family-names: Zhang
+      given-names: Yunbei
+    - family-names: Xu
+      given-names: Miao
+    - family-names: Ge
+      given-names: Yingqiang
+    - family-names: Cheng
+      given-names: Lu
+  journal: arXiv
+  year: 2026
+  url: "https://arxiv.org/abs/2606.07943"

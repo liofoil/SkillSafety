@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# Copy this file to .envrc, replace every <...> value, and keep .envrc out of
+# version control.
+
+# Sandbox service used by Harbor.
+export DAYTONA_API_KEY="<your-daytona-api-key>"
+
+# Agent/model credentials.
+export OPENAI_API_KEY="<your-openai-api-key>"
+export DEEPSEEK_API_KEY="<your-deepseek-api-key>"
+export ANTHROPIC_API_KEY="<your-anthropic-api-key>"
+
+# Optional native Anthropic endpoint override. Leave unset for the provider
+# default unless the replacement endpoint preserves native tool use.
+# export ANTHROPIC_BASE_URL="https://api.anthropic.com"
+
+# Official third-party benchmark distributions.
+# Each value must be an absolute local task-root path containing
+# <task-id>/environment/skills/<skill-name>/SKILL.md.
+export SI_TASKS_DIR="<absolute-path-to-Skill-Inject-task-root>"
+export SB_TASKS_DIR="<absolute-path-to-SkillsBench-task-root>"
+
+# Recovered April 2026 benchmark snapshots. See
+# manifests/BENCHMARK_SNAPSHOTS.md and manifests/checksums/.
+export SI_BENCHMARK_VERSION="bf9fa1febff69e8f6bba50a439b204c5394a1ac3"
+export SB_BENCHMARK_VERSION="5ec3e9ab20bde633ae3c62a8612614eedfff99e6"
+
+# Paper environment pins.
+export CODEX_VERSION_PIN="0.131.0"
+export CLAUDE_CODE_VERSION_PIN="2.1.146"
+# The vendored adapter installs npm openclaw@2026.4.15 and validates this
+# value before launch. Runtime logs reported build 041266a.
+export OPENCLAW_VERSION_PIN="2026.4.15"
+
+# OpenAI-compatible endpoint used only by the POISE instruction generator.
+# Pass these explicitly to poise_pipeline.py; do not overwrite the Codex key.
+export GENERATOR_API_URL="https://api.deepseek.com/v1"
+export GENERATOR_API_KEY="${DEEPSEEK_API_KEY}"
+export GENERATOR_MODEL="deepseek-v4-pro"
+
+# OpenClaw provider configuration used by scripts/matrix/run_cell.sh.
+export OPENCLAW_PROVIDER_BASE_URL="https://api.deepseek.com/v1"
+export OPENCLAW_PROVIDER_API_KEY="${DEEPSEEK_API_KEY}"
+
+# Optional resource/runtime controls.
+export CLAUDE_CODE_MAX_TURNS="${CLAUDE_CODE_MAX_TURNS:-120}"
+export OPENCLAW_TURN_TIMEOUT_SEC="${OPENCLAW_TURN_TIMEOUT_SEC:-600}"
+export PYBIN="${PYBIN:-python}"
+
+# Canary fixture and records remain inside each disposable sandbox. The
+# runner normally sets these in-container; these values are safe local
+# defaults for the synthetic smoke test only.
+export POISE_SYNTHETIC_WORKSPACE="/opt/skill-tools/workspace"
+export POISE_CANARY_DIR="/tmp/poise-canary"
